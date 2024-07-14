@@ -1,0 +1,126 @@
+body{
+    background: black;
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    --bs-navbar-padding-y: 0rem;
+    z-index: 999;
+}
+.side-nav {
+    width: 3.5rem;
+    position: fixed;
+    top: 0;
+    left:0;
+    z-index: 999;
+}
+.navbar-toggler{
+   border: 0;
+   border-radius: 0;
+   color:white;
+   padding: 0;
+}
+
+.nav-text a{
+    color: white;
+}
+.nav-text a:hover, .navbar-nav .nav-link.active{
+    color: white;
+}
+#nav-content{
+    display: none;
+    width: 14rem;
+    z-index: 999;
+}
+.nav-link:focus, .nav-link:hover {
+    color: white;
+}
+
+.img-content {
+    background-color: rgba(255, 255, 255, .7);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: transform 0.5s ease;
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.item-categ:hover .img-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.item-categ{
+    overflow: hidden;
+}
+
+.test{
+    background-color: aqua;
+}
+.spans{
+    font-size: 1.2rem;
+    font-weight:600;
+}
+.ingredients div, .tags div{
+   
+    border-radius: 10%;
+
+}
+.form-row{
+    margin-left: 8rem;
+}
+.form-btn2 {
+    left: 20rem;
+}
+.li, i, button, .card{
+  cursor: pointer;
+}
+.btn a{
+    text-decoration: none;
+    color: white;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    position: relative;
+    animation: rotate 1s linear infinite
+  }
+  .loader::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    inset: 0px;
+    border-radius: 50%;
+    border: 5px solid #FFF;
+    animation: prixClipFix 2s linear infinite ;
+  }
+
+ @keyframes rotate {
+    100%   {transform: rotate(360deg)}
+  }
+
+ @keyframes prixClipFix {
+      0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+      25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+      50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+      75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
+      100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+  }
+
+
+.loading{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
